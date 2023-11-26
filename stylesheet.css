@@ -11,14 +11,20 @@
     text-decoration: none;
   }
 
-  h1{
-    font-size: 150px;
-    text-align: center;
-
-  }
+ 
 
   .caption{
      text-align: center;
+  }
+
+  .titleimg img{
+    width: 100%;
+  }
+ 
+  .titleimg h1{
+    font-size: 150px;
+    color: black;
+    text-align: center;
   }
 
   .container {
