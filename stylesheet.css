@@ -4,7 +4,7 @@
   
 
   body {
-    margin: 0;
+    margin: 0px;
     font-family: "Hiragino Kaku Gothic ProN";
   }
   
@@ -13,6 +13,7 @@
   }
 
   header{
+    margin :0%;
     width: 100%;
     height: 70px;
     background-color: #303030;
@@ -31,6 +32,54 @@ header h1{
   .caption{
      text-align: center;
      padding: 5%;
+  }
+h2{
+  text-align: center;
+  font-size: 30px;
+  margin: 30px;
+}
+
+  .news{
+    text-align: center;
+    margin: 50px;
+  }
+
+  .date{
+    color: #909090;
+  }
+
+  .whatis{
+    margin: 100px;
+  }
+
+  .place{
+    margin: 100px;
+    text-align: center;
+  }
+
+  .info{
+    margin: 100px;
+    text-align: center;
+  }
+
+
+  .flex {
+    display: flex; /*横並び*/
+    justify-content: center;
+  }
+  .flex .image {
+    width: 300px; /*画像サイズ指定*/
+    margin: 0;
+    padding: 0;
+  }
+  .flex .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+  }
+  .flex .text {
+    margin: 0 0 0 20px;
+    padding: 0;
   }
 
   footer p {
