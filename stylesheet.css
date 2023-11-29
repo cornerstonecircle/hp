@@ -13,7 +13,7 @@
   }
 
   header {
-    padding: 30px 4% 10px;
+    padding: 30px 4% 10px ;
     position: fixed;
     top: 0;
     width: 100%;
@@ -41,6 +41,29 @@
     margin: 0 0 0 15px;
     font-size: 14px;
  }
+
+ .fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+
+  .fadeUpTrigger{
+    opacity: 0;
+}
 
   .titleimg img{
     width: 100%;
@@ -74,6 +97,10 @@ h2{
     text-align: center;
   }
 
+  .place img{
+    margin: 5%;
+    width: 90%;
+  }
   .qanda{
     margin:100px;
     text-align: center;

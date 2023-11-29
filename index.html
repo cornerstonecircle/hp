@@ -2,8 +2,9 @@
 <html>
   <head>
     <title>定礎サークル公式HP</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
   </head>
-  <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ 
   <body>
     <header>
       <h1>
@@ -29,7 +30,7 @@
         <br>さあ、一緒に建物の誕生を探ってみましょう。
         </div>
 
-        <div class="news">
+        <div class="news fadeUpTrigger">
           <h2>お知らせ</h2>
           <p><span class="date">2023年4月10日</span><span class="list">　新入生歓迎会を行いました。</span></p>
           <p><span class="date">2023年4月15日</span><span class="list">　令和5年度定礎検定の詳細を公開しました。</span></p>
@@ -38,7 +39,7 @@
          <p><span class="date">2023年11月6日</span><span class="list">　定礎祭を開催しました。</span></p>
          <p><span class="date">2023年11月28日</span><span class="list">　公式ホームページを開設しました。</span></p>
        </div>
-       <div class="whatis">
+       <div class="whatis fadeUpTrigger">
         <h2>What is 定礎サークル?</h2>
         <div class="flex">
           <figure class="image"><img src="joe_ishizue.png" alt="joe_ishizue"></figure>
@@ -47,16 +48,16 @@
             <br><br>当サークルはジョウイシズエ氏が設立して以来、学内の定礎認知向上に努めています。</p>
         </div>
       </div>
-      <div class="place">
+      <div class="place fadeUpTrigger">
       <h2>活動場所</h2>
         <p>日本大学文理学部6号館　ドライエリア</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.57635838134!2d139.63211022633598!3d35.66280788098484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f3b7295ee725%3A0x976c9f9976ffb62f!2z44CSMTU2LTAwNDUg5p2x5Lqs6YO95LiW55Sw6LC35Yy65qGc5LiK5rC077yT5LiB55uu77yS77yV!5e0!3m2!1sja!2sjp!4v1701094528730!5m2!1sja!2sjp" width="100%" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img src="map.png">
       </div>
-
-      <div class="qanda">
+      <div class="qanda fadeUpTrigger">
       <h2>よくある質問</h2>
-      <p class="question">Q.部員は何人ですか？</p>
-      <p>現在の部員数は522名で、学内最多の人数を誇っています。</p>
+      <p class="question">Q.どうすれば加入できますか？</p>
+      <p>どなたでもご加入いただけます。SNSのプロフィールに「定礎サークル」とご記入ください。</p>
       <p class="question">Q.主な活動内容は何ですか？</p>
       <p>学内に存在する定礎を巡って意見を交わしたり、未だに見つかっていない定礎を探索したりしています。</p>
       <p class="question">Q.本当に実在するサークルですか？</p>
@@ -64,15 +65,39 @@
       <p class="question">Q.本当ですか？</p>
       <p>はい。</p>
     </div>  
-    <div class="info">
+    <div class="info fadeUpTrigger">
       <h2>お問い合わせ</h2>
       <p>現在、お問い合わせは受け付けておりません。</p>
     </div>
-    </body>
+
 
     <footer>
         <p>©日本大学文理学部非公認サークル　定礎サークル All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+      // 動きのきっかけとなるアニメーションの名前を定義
+function fadeAnime(){
+
+//ふわっと動くきっかけのクラス名と動きのクラス名の設定
+$('.fadeUpTrigger').each(function(){ //fadeInUpTriggerというクラス名が
+　　var elemPos = $(this).offset().top-0; //要素より、50px上の
+　　var scroll = $(window).scrollTop();
+　　var windowHeight = $(window).height();
+　　if (scroll >= elemPos - windowHeight){
+　　$(this).addClass('fadeUp');
+　　// 画面内に入ったらfadeInというクラス名を追記
+　　}else{
+　　　$(this).removeClass('fadeUp');
+　　// 画面外に出たらfadeInというクラス名を外す
+　　}
+　　});
+}
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function (){
+    fadeAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面をスクロールをしたら動かしたい場合の記述
+    </script>
     </body>
 
 </html>
