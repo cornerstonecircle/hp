@@ -37,7 +37,7 @@
     margin: 0;
     display: flex;
  }
- li {
+ .pc-nav li {
     margin: 0 0 0 15px;
     font-size: 14px;
  }
@@ -64,9 +64,13 @@
   .fadeUpTrigger{
     opacity: 0;
 }
-
-  .titleimg img{
+  .titleimg{
+    padding: 100px 0px 0px 0px;
+  }
+  .titleimg video{
     width: 100%;
+    display: block;
+    margin: auto;
   }
 
   .caption{
@@ -133,6 +137,11 @@ h2{
   .question{
     font-weight: bold;
   }
+
+  .sns-btn img{
+    margin: 10px;
+    }
+
   footer p {
     color: #ffffff;
     font-size: 12px;
